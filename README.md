@@ -22,34 +22,28 @@ Everything is local. Nothing phones home. All data lives in your git repo.
 
 ---
 
-## Setup (30 seconds of work, Claude does the rest)
+## Setup (One Prompt)
 
-### Step 1: Copy the skill file
+Open Claude Code in your project directory and paste this:
+
+```
+Fetch the SKILL.md from https://raw.githubusercontent.com/JrokCodes/self-evolving-claude/main/SKILL.md and save it to ~/.claude/skills/self-evolving-setup/SKILL.md (create the directory if needed). Then read that skill file and execute the full setup — ask me the questions, install everything, configure hooks, and walk me through it.
+```
+
+Claude does everything. You just answer 3 questions.
+
+After setup, restart Claude Code and you're live.
+
+### Alternative: Manual Setup
+
+If you prefer to set it up yourself:
 
 ```bash
 mkdir -p ~/.claude/skills/self-evolving-setup
 curl -o ~/.claude/skills/self-evolving-setup/SKILL.md https://raw.githubusercontent.com/JrokCodes/self-evolving-claude/main/SKILL.md
 ```
 
-Or clone and copy:
-```bash
-git clone https://github.com/JrokCodes/self-evolving-claude.git
-cp self-evolving-claude/SKILL.md ~/.claude/skills/self-evolving-setup/SKILL.md
-```
-
-### Step 2: Open Claude Code in your project and say
-
-```
-/self-evolving-setup
-```
-
-### Step 3: Answer 3 questions
-
-Claude asks what you build, your project directory, and full vs minimal setup. Then it installs and configures everything automatically.
-
-### Step 4: Restart Claude Code
-
-Settings changes need a restart. After that, you're live.
+Then open Claude Code and say `/self-evolving-setup`.
 
 ---
 
